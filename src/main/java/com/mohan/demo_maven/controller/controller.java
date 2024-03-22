@@ -6,15 +6,19 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 import com.mohan.demo_maven.domain.login;
 
 import com.mohan.demo_maven.service.logservice;
+import com.mohan.demo_maven.service.regservice;
 
 @Controller
 public class controller {
  
     @Autowired
     private logservice service;
+    private regservice rservice;
  
     @GetMapping("/")
     public String api()
@@ -40,4 +44,7 @@ public class controller {
     public String display() {
         return "display";
     }
+    
+    
+    
 }
